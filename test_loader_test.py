@@ -1,6 +1,5 @@
 from test_case import TestCase
 from test_loader import TestLoader
-from test_runner import TestRunner
 from test_suite import TestSuite
 from test_stub import TestStub
 from test_spy import TestSpy
@@ -39,9 +38,3 @@ class TestLoaderTest(TestCase):
         names = loader.get_test_case_names(Test)
         assert names == []
 
-
-loader = TestLoader()
-suite = loader.make_suite(TestLoaderTest)
-
-runner = TestRunner()
-runner.run(suite)
